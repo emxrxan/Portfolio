@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="de">
+
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Portfolio</title>
+        <link rel="stylesheet" type="text/css" href="./src/css/style.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    </head>
+
+    <body>
+            <!--NAGIGATION-->
+
+            <ul id="navigation">
+                <li id="caption"><a href="index.html"><h2>Portfolio</h2></a></li>
+                <li><a href="#home">Home</a></li>
+                <li>
+                    <span onclick="show_project()" id="drop_span">Projekte</span>
+                    <ul class="dropdown_project">
+                        <li><a href="#js" onclick="show_project()">Javascript</a></li>
+                        <li><a href="#api" onclick="show_project()">API</a></li>
+                    </ul>
+                </li>
+                <li><a href="#contact">Contanct me</a></li>
+            </ul>
+
+            <!--DROPDOWN-->
+
+            <ul class="navigation_dropdown">
+                <li id="caption"><a href="index.html"><h2>Portfolio</h2></a></li>
+                <li><span onclick="show_dropdown()" class="material-symbols-outlined">menu</span></li>
+                <li>
+                    <ul class="navigation_dropdown_menu">
+                        <li><a href="#home" onclick="show_dropdown()">Home</a></li>
+                        <li>
+                            <span onclick="show_project()" id="drop_span">Projekte</span>
+                            <ul class="dropdown_project">
+                                <li><a href="#js" onclick="show_project() , show_dropdown()">Javascript</a></li>
+                                <li><a href="#api" onclick="show_project() , show_dropdown()">API</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#contact" onclick="show_dropdown()">Contanct me</a></li>
+                    </ul>
+                </li>
+            </ul>
+
+            <!--DROPDOWN-->
+
+            <!--NAVIGATION-->
+        
+            <!--MAIN-CONTAINER-->
+
+                <div class="darkmode-container">
+                    <div id="button" onclick="set_darkmode()"><span class="material-symbols-outlined">dark_mode</span></div>
+                </div>
+
+                <div class="scroll">
+                    <section class="haupt_container" id="home">home</section>
+                    <section class="haupt_container" id="js">js</section>
+                    <section class="haupt_container" id="api">api</section>
+                    <section class="haupt_container" id="contact">contact</section>
+                </div>
+        
+        <!--MAIN-CONTAINER-->
+
+        <!--JS-SCRIPT-->
+
+        <script src="./src/js/anziegen.js" defer></script>
+
+        <!--JS-SCRIPT-->
+
+    </body>
+
+</html>
