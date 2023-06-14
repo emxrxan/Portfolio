@@ -15,9 +15,7 @@ const set_darkmode = function(){
     const button = document.querySelector(".darkmode-container > #button");
     if (button.querySelector(".material-symbols-outlined").innerText == "dark_mode"){
         button.querySelector(".material-symbols-outlined").innerText = "light_mode";
-        button.style.left = "48px";
     } else {
         button.querySelector(".material-symbols-outlined").innerText = "dark_mode";
-        button.style.left = "0px";
     }
 }

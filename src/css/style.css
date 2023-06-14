@@ -283,7 +283,7 @@ li a:active{
     position: fixed;
     top: 100px;
     right: 20px;
-    width: 80px;
+    width: 32px;
     height: 33px;
     border: 2px solid var(--dark);
     border-radius: 2rem;
