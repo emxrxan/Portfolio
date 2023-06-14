@@ -4,6 +4,8 @@
     --light: #8c8cff;
     --dark: #2e2e52;
     --hover: #fff;
+    --beton: #fff;
+    --Hintergund: #8c8cffc0;
 }
 
 /*===FAREBN===*/
@@ -39,6 +41,7 @@
     --light: #2e2e52;
     --dark: #8c8cff;
     --hover: #5a5aa5;
+    --Hintergund: #2e2e528c;
 }
 
 html,body{
@@ -48,8 +51,11 @@ html,body{
     font-family: myfont, Arial, Helvetica, sans-serif;
     font-weight: normal;
     font-size: 1rem;
-    background-color: var(--light);
     position: relative;
+}
+
+body::-webkit-scrollbar{
+    width: 0;
 }
 
 /*===GENERELLES===*/
@@ -69,6 +75,7 @@ html,body{
     color: var(--dark);
     border-bottom: 4px solid var(--dark);
     z-index: 2;
+    transition: background-color 1s;
 }
 
 li{
@@ -169,6 +176,7 @@ li a:active{
     top: 0;
     left: 0;
     z-index: 2;
+    transition: background-color 1s;
 }
 
 .show_navigation_dropdown{
@@ -262,7 +270,6 @@ li a:active{
     position: absolute;
     top: 0;
     left: 0;
-    width: 100%;
     display: flex;
     justify-content: flex-start;
     flex-direction: column;
@@ -272,7 +279,9 @@ li a:active{
 .scroll > .haupt_container{
     width: 100%;
     min-height: 100%;
-    background-color: var(--light);
+    background-color: var(--Hintergund);
+    border-bottom: 4px solid var(--dark);
+    transition: background-color 1s;
 }
 
 /*===MAIN-CONTAINER===*/
@@ -313,3 +322,189 @@ li a:active{
 }
 
 /*===DARKMODE-CONTAINER===*/
+
+/*===HOME===*/
+
+@keyframes smile_home {
+    0%{transform: rotate(0); color: var(--light);}
+    50%{transform: rotateX(360deg);}
+    100%{transform: rotateY(180deg); color: var(--beton);}
+}
+
+#home{
+    display: flex;
+}
+
+#home > #vorstellung{
+    text-align: center;
+    font-size: 1.3rem;
+    padding-top: 4rem;
+    width: 60%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+#home > #vorstellung > h3{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#home > #vorstellung > h3 > .material-symbols-outlined{
+    font-size: 3rem;
+    color: var(--beton);
+    background-color: var(--dark);
+    border-radius: 100%;
+    animation: smile_home 5s infinite;
+    animation-delay: 1s;
+    margin-left: 1rem;
+    box-shadow: 0 0 1rem var(--beton);
+}
+
+#home > #vorstellung > #profilbild{
+    width: 300px;
+    height: 300px;
+    background-color: var(--dark);
+    border: 3px solid var(--hover);
+    border-radius: 100%;
+    box-shadow: 0 0 2rem var(--hover);
+}
+
+#home > #vorstellung > #profilbild > img{
+    width: 100%;
+    height: auto;
+    border-radius: 100%;
+}
+
+#home > #vorstellung > p{
+    width: 80%;
+    line-height: 2rem;
+}
+
+#home > #vorstellung > p > .betonen{
+    color: var(--beton);
+    box-shadow: 0 0 1rem var(--dark);
+}
+
+#home > #vorstellung > #link_github{
+    margin-top: 1rem;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+#home > #vorstellung > #link_github > a:visited{
+    background-color: var(--dark);
+    border: 3px solid var(--dark);
+    text-decoration: none;
+    color: var(--hover);
+} 
+
+#home > #vorstellung > #link_github > a{
+    padding: 1rem;
+    padding-left: 1.2rem;
+    padding-right: 1.2rem;
+    background-color: var(--dark);
+    border: 3px solid var(--dark);
+    text-decoration: none;
+    color: var(--hover);
+    border-radius: 1rem;
+    transition: color 0.5s, box-shadow 0.5s;
+}
+#home > #vorstellung > #link_github > a:hover{
+    cursor: pointer;
+    text-decoration: none;
+    color: var(--light);
+    border: 3px solid var(--hover);
+    box-shadow: 0 0 2rem var(--hover);
+    transition: color 0.5s, box-shadow 0.5s;
+} 
+#home > #vorstellung > #link_github > a:active{
+    background-color: var(--hover);
+    color: var(--light);
+} 
+
+@media (max-width:1024px) {
+    #home > #vorstellung{
+        font-size: 1.1rem;
+    }
+
+    #home > #vorstellung > #profilbild{
+        width: 200px;
+        height: 200px;
+    }
+
+    #home > #vorstellung > #link_github > a{
+        padding: 0.8rem;
+        padding-left: 1rem;
+        padding-right: 1rem;
+        margin: 0.5rem;
+    }
+}
+
+#home > #daten{
+    width: 40%;
+    padding-top: 4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#home > #daten > .daten_container{
+    padding: 0.5rem;
+    margin: 1rem;
+    width: 20rem;
+    height: 18rem;
+    background-color: var(--dark);
+    border-radius: 1rem;
+    text-align: center;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    border: 4px solid var(--hover);
+    box-shadow: 0 0  3rem var(--dark);
+}
+
+.daten_container > .skill_container{
+    display: flex;
+    align-items: center;
+    font-size: 1.4rem;
+}
+
+
+.daten_container > .skill_container > .material-symbols-outlined{
+    font-size: 2rem;
+    font-weight: bold;
+    border-radius: 0.5rem;
+    margin-right: 0.5rem;
+    padding: 0.3rem;
+}
+
+.daten_container > .skill_container > #html{background-color: #ff4d00;}
+.daten_container > .skill_container > #html_skill_span{ color:#ff4d00;}
+
+.daten_container > .skill_container > #css{background-color: #000089;}
+.daten_container > .skill_container > #css_skill_span{color: #000089;}
+
+.daten_container > .skill_container > #js{background-color: #cccc00;}
+.daten_container > .skill_container > #js_skill_span{color: #cccc00;}
+
+.daten_container > .skill_container > #git{background-color: #ff0000;}
+.daten_container > .skill_container > #git_skill_span{ color: #ff0000;}
+
+.daten_container > .skill_container > .description{
+    background-color: #000089;
+    color: var(--beton);
+    font-weight: normal;
+    border-radius: 100%;
+    padding: 0.5rem;
+}
+/*===HOME===*/
