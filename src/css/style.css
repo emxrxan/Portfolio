@@ -1,11 +1,11 @@
 /*===FAREBN===*/
 
 :root{
-    --light: #8c8cff;
-    --dark: #2e2e52;
-    --hover: #fff;
-    --beton: #fff;
-    --Hintergund: #8c8cffc0;
+    --font: #072A40;
+    --light: #FAF7EF;
+    --dark: #188CA5;
+    --beton: #19B7BD;
+    --Hintergrund: #FAF7EF;
 }
 
 /*===FAREBN===*/
@@ -38,24 +38,37 @@
 }
 
 .darkmode{
-    --light: #2e2e52;
-    --dark: #8c8cff;
-    --hover: #5a5aa5;
-    --Hintergund: #2e2e528c;
+    --light: ;
+    --dark: ;
+    --beton: ;
+    --Hintergrund: ;
 }
 
 html,body{
     width: 100%;
     height: 100%;
-    scroll-behavior: smooth;
     font-family: myfont, Arial, Helvetica, sans-serif;
     font-weight: normal;
     font-size: 1rem;
-    position: relative;
+    scroll-behavior: smooth;
+}
+
+body{
+    overflow-y: scroll;
 }
 
 body::-webkit-scrollbar{
-    width: 0;
+    width: 10px;
+}
+
+body::-webkit-scrollbar-track{
+    background-color: var(--light);
+}
+
+body::-webkit-scrollbar-thumb{
+    width: 100%;
+    height: 10px;
+    background-color: var(--dark);
 }
 
 /*===GENERELLES===*/
@@ -67,13 +80,14 @@ body::-webkit-scrollbar{
     top: 0;
     left: 0;
     width: 100%;
+    height: 75px;
     list-style: none;
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    background-color: var(--light);
-    color: var(--dark);
-    border-bottom: 4px solid var(--dark);
+    background-color: var(--dark);
+    color: var(--font);
+    border-bottom: 4px solid var(--font);
     z-index: 2;
     transition: background-color 1s;
 }
@@ -100,9 +114,9 @@ li > .dropdown_project{
     text-align: center;
     width: 100%;
     height: 0px;
-    background-color: var(--light);
-    color: var(--dark);
-    border: 0px solid var(--dark);
+    background-color: var(--dark);
+    color: var(--font);
+    border: 0px solid var(--font);
     border-bottom-left-radius: 1rem;
     border-bottom-right-radius: 1rem;
     overflow: hidden;
@@ -112,7 +126,7 @@ li > .dropdown_project{
 li > .show_dropdown_project{
     padding: 0.5rem;
     height: 100px;
-    border: 2px solid var(--dark);
+    border: 2px solid var(--font);
     border-top: none;
     transition: all 1s;
 }
@@ -126,35 +140,34 @@ li > ul > li{
 li #drop_span:visited,
 li a:visited{
     text-decoration: none;
-    color: var(--dark);
+    color: var(--font);
 }
 
 li a{
     text-decoration: none;
-    color: var(--dark);
+    color: var(--font);
 }
 
 li #drop_span:hover,
 li a:hover{
     cursor: pointer;
     text-decoration: none;
-    color: var(--hover);
-    border-bottom: 3px solid var(--dark);
+    color: var(--light);
+    border-bottom: 3px solid var(--light);
     transition: color 1s;
 }
 
 li #drop_span:active,
 li a:active{
     text-decoration: none;
-    color: var(--dark);
-    border-bottom: 3px solid var(--dark);
+    border-bottom: 3px solid var(--font);
 }
 
 #caption a,
 #caption a:hover,
 #caption a:active{
     text-decoration: none;
-    color: var(--dark);
+    color: var(--font);
     cursor: pointer;
 }
 
@@ -163,12 +176,12 @@ li a:active{
 .navigation_dropdown{
     list-style: none;
     width: 100%;
-    height: 82px;
+    height: 75px;
     display: none;
     justify-content: flex-end;
-    background-color: var(--light);
-    color: var(--dark);
-    border-bottom: 4px solid var(--dark);
+    background-color: var(--dark);
+    color: var(--font);
+    border-bottom: 4px solid var(--font);
     position: relative;
     overflow: hidden;
     transition: all 1s;
@@ -190,13 +203,13 @@ li a:active{
 }
 
 .navigation_dropdown .material-symbols-outlined:hover{
-    color: var(--hover);
+    color: var(--light);
     cursor: pointer;
 }
 
 .navigation_dropdown .material-symbols-outlined:active{
-    color: var(--dark);
-    cursor: pointer;
+    color: var(--font);
+
 }
 
 
@@ -242,7 +255,7 @@ li a:active{
 }
 
 .navigation_dropdown_menu .show_dropdown_project{
-    border: 2px solid var(--dark);
+    border: 2px solid var(--light);
     border-radius: 1rem;
     height: 150px;
     transition: all 1s;
@@ -262,249 +275,267 @@ li a:active{
 
 /*===NAVIGATION===*/
 
-/*===MAIN-CONTAINER===*/
-
-.scroll{
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    display: flex;
-    justify-content: flex-start;
-    flex-direction: column;
-    z-index: 0;
-}
-
-.scroll > .haupt_container{
-    width: 100%;
-    min-height: 100%;
-    background-color: var(--Hintergund);
-    border-bottom: 4px solid var(--dark);
-    transition: background-color 1s;
-}
-
-/*===MAIN-CONTAINER===*/
-
-/*===DARKMODE-CONTAINER===*/
+/*===DARKMODE===*/
 
 .darkmode-container{
     position: fixed;
-    top: 100px;
+    top: 90px;
     right: 20px;
-    width: 32px;
-    height: 33px;
-    border: 2px solid var(--dark);
-    border-radius: 2rem;
-    z-index: 1;
+    background-color: var(--beton);
+    border-radius: 100%;
+    border: 2px solid var(--font);
 }
 
 .darkmode-container > #button{
-    width: 25px;
-    height: 90%;
-    background-color: var(--dark);
-    border-radius: 100%;
-    margin: 0.1rem;
-    padding: 0.05rem;
-    position: absolute;
-    left: 0px;
-    top: 0px;
-    color: var(--light);
-    transition: left 1s;
-}
-
-.darkmode-container > #button:hover{
-    cursor: pointer;
+    color: var(--font);
+    width: 30px;
+    height: 30px;
 }
 
 .darkmode-container > #button > .material-symbols-outlined{
-    font-weight: bold;
+   width: 100%;
+   height: 100%;
+   padding: 0.18rem;
+   font-weight: bold;
 }
 
-/*===DARKMODE-CONTAINER===*/
+.darkmode-container > #button > .material-symbols-outlined:hover{
+    cursor: pointer;
+}
+
+/*===DARKMODE===*/
+
+/*===MAIN-CONTAINER===*/
+
+.haupt_container{
+    width: 100%;
+    min-height: 100%;
+    border-bottom: 3px solid var(--font);
+    background-color: var(--Hintergrund);
+}
+
+/*===MAIN-CONTAINER===*/
 
 /*===HOME===*/
 
-@keyframes smile_home {
-    0%{transform: rotate(0); color: var(--light);}
-    50%{transform: rotateX(360deg);}
-    100%{transform: rotateY(180deg); color: var(--beton);}
+@keyframes smile {
+    0%      {   transform: rotateX(0);                                      }
+    50%     {   transform: rotateX(360deg); background-color: var(--beton); }
+    100%    {   transform: rotateY(180deg); background-color: var(--dark); }
 }
 
 #home{
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas: 
+    "about bewerbung"
+    "about skill"
+    "about links";
 }
 
-#home > #vorstellung{
-    text-align: center;
-    font-size: 1.3rem;
-    padding-top: 4rem;
-    width: 60%;
-    height: 100%;
+#home > #about_me{
+    border-right: 2px solid var(--font);
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
+    grid-area: about;
+    text-align: center;
     gap: 1rem;
+    padding: 1.5rem;
+    padding-top: 3rem;
+    
 }
 
-#home > #vorstellung > h3{
+#home > #about_me > h3{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    width: 450px;
+    font-size: 1.3rem;
 }
 
-#home > #vorstellung > h3 > .material-symbols-outlined{
-    font-size: 3rem;
-    color: var(--beton);
+#home > #about_me > h3 > .material-symbols-outlined{
+    font-size: 2rem;
+    animation: smile 5s infinite;
+    animation-delay: 2s;
+    border-radius: 100%;
+}
+
+#home > #about_me > #profilbild{
+    width: 250px;
+    height: 250px;
     background-color: var(--dark);
     border-radius: 100%;
-    animation: smile_home 5s infinite;
-    animation-delay: 1s;
-    margin-left: 1rem;
-    box-shadow: 0 0 1rem var(--beton);
+    border: 5px solid var(--font);
+    box-shadow: 0 0 2rem var(--font);
 }
 
-#home > #vorstellung > #profilbild{
-    width: 300px;
-    height: 300px;
-    background-color: var(--dark);
-    border: 3px solid var(--hover);
-    border-radius: 100%;
-    box-shadow: 0 0 2rem var(--hover);
-}
-
-#home > #vorstellung > #profilbild > img{
+#home > #about_me > #profilbild > img{
     width: 100%;
     height: auto;
     border-radius: 100%;
 }
 
-#home > #vorstellung > p{
-    width: 80%;
+#home > #about_me > p{
+    font-size: 1.2rem;
     line-height: 2rem;
 }
 
-#home > #vorstellung > p > .betonen{
+#home > #about_me > p > .betonen{
     color: var(--beton);
-    box-shadow: 0 0 1rem var(--dark);
+    box-shadow: 0 0 2rem var(--beton);
+    border-radius: 0.5rem;
+    padding: 0.2rem;
 }
 
-#home > #vorstellung > #link_github{
-    margin-top: 1rem;
-    width: 100%;
+#home > #bewerbung{
+    border-bottom: 2px solid var(--font);
+    grid-area: bewerbung;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 3rem;
+    text-align: center;
+}
+
+#home > #bewerbung a{
+    display: inline-block;
+    margin: 1rem;
+    text-decoration: none;
+    color: var(--font);
+    font-size: 1.2rem;
+    padding: 0.5rem;
+    border: 2px solid var(--font);
+    background-color: var(--beton);
+}
+
+#home > #bewerbung a:hover{
+    color: var(--light);
+    transform: scale(1.1);
+    border-radius: 0.5rem;
+    transition: transform 0.25s, border-radius 0.25s;
+}
+
+#home > #bewerbung a:active{
+    color: var(--font);
+    transform: scale(0.8);
+    border-radius: 0.5rem;
+}
+
+#home > #skills{
+    border-bottom: 2px solid var(--font);
+    grid-area: skill;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+}
+
+#home > #skills > h4{text-align: center; margin-bottom: 0.5rem;}
+
+#home > #skills > #skill_flex_container{
     display: flex;
     justify-content: space-around;
     align-items: center;
     flex-wrap: wrap;
 }
 
-#home > #vorstellung > #link_github > a:visited{
-    background-color: var(--dark);
-    border: 3px solid var(--dark);
-    text-decoration: none;
-    color: var(--hover);
-} 
+#home #skill_flex_container > .skill_container{
+    margin: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
 
-#home > #vorstellung > #link_github > a{
+#home  #skill_flex_container .skill_container > .skill_container_innen{
+    width: 60px;
+    height: 60px;
+    font-size: 3.25rem;
+    text-align: center;
+    margin-bottom: 1rem;
+    border-radius: 0.5rem;
+}
+
+.skill_container > #html_background{background-color: #F1662A; color: var(--font);}
+.skill_container > #html_color{color: #F1662A;}
+
+.skill_container > #css_background{background-color: #1572B6; color: var(--font);}
+.skill_container > #css_color{color: #1572B6;}
+
+.skill_container > #js_background{background-color: #F7DF1E; color: var(--font);}
+.skill_container > #js_color{color: #F7DF1E;}
+
+.skill_container > #git_background{background-color: #a83822; color: var(--font);}
+.skill_container > #git_color{color: #a83822;}
+
+#home > #github_link{
+    grid-area: links;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    font-size: 1.2rem;
+}
+
+#home > #github_link > a{
+    margin: 1rem;
+    border: 2px solid var(--font);
     padding: 1rem;
     padding-left: 1.2rem;
     padding-right: 1.2rem;
-    background-color: var(--dark);
-    border: 3px solid var(--dark);
+    background-color: var(--beton);
     text-decoration: none;
-    color: var(--hover);
-    border-radius: 1rem;
-    transition: color 0.5s, box-shadow 0.5s;
+    color: var(--font);
+    transition: background-color 0.5s, box-shadow 0.5s, transform 0.3s;
 }
-#home > #vorstellung > #link_github > a:hover{
-    cursor: pointer;
-    text-decoration: none;
-    color: var(--light);
-    border: 3px solid var(--hover);
-    box-shadow: 0 0 2rem var(--hover);
-    transition: color 0.5s, box-shadow 0.5s;
-} 
-#home > #vorstellung > #link_github > a:active{
-    background-color: var(--hover);
-    color: var(--light);
-} 
 
-@media (max-width:1024px) {
-    #home > #vorstellung{
-        font-size: 1.1rem;
+#home > #github_link > a:hover{
+    border-radius: 0.5rem;
+    color: var(--light);
+    transform: scale(1.1);
+    transition: transform 0.3s;
+}
+
+#home > #github_link > a:active{transform: scale(0.8);}
+
+@media (max-width:900px) {
+    #home{
+        grid-template-rows: 1fr 0.25fr 0.25fr 0.25fr;
+        grid-template-areas: 
+        "about about"
+        "bewerbung bewerbung"
+        "skill skill"
+        "links links";
     }
 
-    #home > #vorstellung > #profilbild{
+    #home > #about_me{border-bottom: 2px solid var(--font); border-right: none;}
+
+    #home > #about_me{ padding-top: 8rem;}
+    #home > #bewerbung{padding: 1rem;}
+
+    #home > #about_me > #profilbild{
         width: 200px;
         height: 200px;
     }
 
-    #home > #vorstellung > #link_github > a{
-        padding: 0.8rem;
-        padding-left: 1rem;
-        padding-right: 1rem;
-        margin: 0.5rem;
+    #home #skill_flex_container > .skill_container{width: 207px;}
+}
+
+@media (max-width:650px) {
+    #home > #about_me > h3 > .material-symbols-outlined{display: none;}
+    #home > #about_me > h3{display: inline-block; word-wrap: break-word;width: 100%;font-size: 1.1rem;}
+    #home > #about_me > p{font-size: 1rem;}
+
+    .darkmode-container > #button{
+        width: 25px;
+        height: 25px;
     }
+
+    .darkmode-container > #button > .material-symbols-outlined{padding: 0.05rem;}
 }
 
-#home > #daten{
-    width: 40%;
-    padding-top: 4rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-#home > #daten > .daten_container{
-    padding: 0.5rem;
-    margin: 1rem;
-    width: 20rem;
-    height: 18rem;
-    background-color: var(--dark);
-    border-radius: 1rem;
-    text-align: center;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    flex-direction: column;
-    border: 4px solid var(--hover);
-    box-shadow: 0 0  3rem var(--dark);
-}
-
-.daten_container > .skill_container{
-    display: flex;
-    align-items: center;
-    font-size: 1.4rem;
-}
-
-
-.daten_container > .skill_container > .material-symbols-outlined{
-    font-size: 2rem;
-    font-weight: bold;
-    border-radius: 0.5rem;
-    margin-right: 0.5rem;
-    padding: 0.3rem;
-}
-
-.daten_container > .skill_container > #html{background-color: #ff4d00;}
-.daten_container > .skill_container > #html_skill_span{ color:#ff4d00;}
-
-.daten_container > .skill_container > #css{background-color: #000089;}
-.daten_container > .skill_container > #css_skill_span{color: #000089;}
-
-.daten_container > .skill_container > #js{background-color: #cccc00;}
-.daten_container > .skill_container > #js_skill_span{color: #cccc00;}
-
-.daten_container > .skill_container > #git{background-color: #ff0000;}
-.daten_container > .skill_container > #git_skill_span{ color: #ff0000;}
-
-.daten_container > .skill_container > .description{
-    background-color: #000089;
-    color: var(--beton);
-    font-weight: normal;
-    border-radius: 100%;
-    padding: 0.5rem;
-}
 /*===HOME===*/
