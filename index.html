@@ -11,15 +11,15 @@
 
     <body>
             <!--NAGIGATION-->
-
+        <div class="main_container">
             <ul id="navigation">
                 <li id="caption"><a href="index.html"><h2>Portfolio</h2></a></li>
                 <li><a href="#home">Home</a></li>
                 <li>
-                    <span onclick="show_project()" id="drop_span">Projekte</span>
+                    <span onclick="show_project()">Projekte</span>
                     <ul class="dropdown_project">
-                        <li><a href="#js">Javascript</a></li>
-                        <li><a href="#api">API</a></li>
+                        <li><a href="#js" onclick="show_project()">Javascript</a></li>
+                        <li><a href="#api" onclick="show_project()">API</a></li>
                     </ul>
                 </li>
                 <li><a href="#contact">Contanct me</a></li>
@@ -27,9 +27,12 @@
 
             <!--DROPDOWN-->
 
-            <!-- <ul class="navigation_dropdown">
-                <li id="caption"><a href="index.html"><h2>Portfolio</h2></a></li>
-                <li><span onclick="show_dropdown()" class="material-symbols-outlined">menu</span></li>
+            <ul class="navigation_dropdown">
+                <li id="caption">
+                    <span onclick="show_dropdown()" class="material-symbols-outlined">menu</span>
+                    <a href="index.html"><h2>Portfolio</h2></a>
+                </li>
+                
                 <li>
                     <ul class="navigation_dropdown_menu">
                         <li><a href="#home" onclick="show_dropdown()">Home</a></li>
@@ -43,7 +46,15 @@
                         <li><a href="#contact" onclick="show_dropdown()">Contanct me</a></li>
                     </ul>
                 </li>
-            </ul> -->
+            </ul>
+
+            <div id="hauptcontent_container">
+                <section class="haupt_container" id="home">home</section>
+                <section class="haupt_container" id="js">js</section>
+                <section class="haupt_container" id="api">api</section>
+                <section class="haupt_container" id="contact">contact</section>
+            </div>
+        </div>
 
             <!--DROPDOWN-->
 
