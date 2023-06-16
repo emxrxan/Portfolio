@@ -455,9 +455,11 @@ li a:active{
     width: 60px;
     height: 60px;
     font-size: 3.25rem;
-    text-align: center;
     margin-bottom: 1rem;
     border-radius: 0.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .skill_container > #html_background{background-color: #F1662A; color: var(--font);}
