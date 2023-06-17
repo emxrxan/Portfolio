@@ -5,7 +5,7 @@
     --light: #FAF7EF;
     --dark: #188CA5;
     --beton: #19B7BD;
-    --Hintergrund: #FAF7EF;
+    --Hintergrund: #faf7eff2;
 }
 
 /*===FAREBN===*/
@@ -84,6 +84,7 @@ html,body{
     background-color: var(--dark);
     border-right: 3px solid var(--font);
     list-style: none;
+    z-index: 1;
 }
 
 li{
@@ -111,6 +112,13 @@ li a:hover{
 #caption > a:hover{
     color: var(--font);
 }
+
+li > span:active,
+li a:active{
+    color: var(--font);
+    transition: all 0s;
+}
+
 
 li > .dropdown_project{
     list-style: none;
@@ -142,24 +150,25 @@ li > .show_dropdown_project{
     position: fixed;
     top: 0;
     left: 0;
-    width: 15rem;
-    height: 3rem;
+    width: 2.5rem;
+    height: 2rem;
     background-color: var(--dark);
-    border-right: 3px solid var(--font);
-    border-bottom: 3px solid var(--font);
+    border: 3px solid var(--font);
+    border-left: 2px solid var(--font);
+    border-bottom-right-radius: 0.2rem;
     overflow: hidden;
-    transition: height 0.5s;
+    transition: height 0.5s, width 0.5s;
+    z-index: 1;
 }
 
+.navigation_dropdown > li{padding: 0;}
+
+.show_navigation_dropdown > li{padding: 0.5;}
 .show_navigation_dropdown{
     height: 100%;
-    transition: height 0.5s;
-}
-
-.navigation_dropdown > #caption{
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
+    width: 15rem;
+    padding: 0.5rem;
+    transition: height 0.5s, width 0.5s;
 }
 
 .navigation_dropdown > #caption > .material-symbols-outlined{
@@ -168,7 +177,6 @@ li > .show_dropdown_project{
 }
 
 .navigation_dropdown > #caption > .material-symbols-outlined:hover{border:none;}
-
 
 @media (max-width:768px) {
     li > span,
@@ -196,6 +204,10 @@ li > .show_dropdown_project{
     height: 100%;
     overflow-y: scroll;
     scroll-behavior: smooth;
+    background-image: url(../img/Hintergrund.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 70%;
 }
 
 #hauptcontent_container::-webkit-scrollbar{
@@ -211,6 +223,172 @@ li > .show_dropdown_project{
     width: 100%;
     min-height: 100%;
     border: 2px solid var(--font);
+    padding: 1.5rem;
+    padding-top: 2.5rem;
+    z-index: 0;
+    background-color: var(--Hintergrund);
 }
 
 /*===MAIN-CONTAINER===*/
+
+/*===HOME===*/
+
+@keyframes profilbild_shadow{
+    0%    {  border: 4px solid var(--font); }
+    33%   {  border: 4px solid var(--dark); }
+    66%   {  border: 4px solid var(--beton);}
+    100%  {  border: 4px solid var(--font); }
+}
+
+
+#about_me{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 1.5rem;
+    text-align: center;
+    font-size: 1.2rem;
+    position: relative;
+    color: var(--font);
+    margin-bottom: 2rem;
+}
+
+#about_me > #profilbild{
+    min-width: 200px;
+    min-height: 200px;
+    background-color: var(--dark);
+    border: 3px solid var(--font);
+    border-radius: 100%;
+    box-shadow: 0 0  3rem var(--beton);
+    animation: profilbild_shadow 5s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: ease-in-out;
+}
+
+#about_me > #profilbild > img{
+    width: 100%;
+    height: auto;
+    border-radius: 100%;
+}
+
+#about_me > p{line-height: 2rem;}
+
+#about_me > h3 > .betonen{color: var(--beton);}
+#about_me > p > .betonen{box-shadow: 0 0 2rem var(--beton); padding: 0.2rem;}
+
+#about_me > p > a:visited{color: var(--beton);}
+#about_me > p > a{color: var(--beton); text-decoration: none;border-bottom: 0px solid var(--beton);}
+#about_me > p > a:hover{border-bottom: 2px solid var(--beton);}
+#about_me > p > a:active{color: var(--font);}
+
+
+
+@media (max-width:600px) {
+    #about_me{font-size: 1rem;}
+
+    #about_me > #profilbild{
+        min-width: 150px;
+        min-height: 150px;
+    }
+}
+
+/*===HOME===*/
+
+/*===SKILLS===*/
+
+#skills{
+    padding-left: 1rem;
+    padding-right: 1rem;
+    margin-bottom: 4rem;
+}
+
+#skill_flex_container{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;   
+    flex-wrap: wrap;
+}
+#skill_flex_container > .skill_container{
+    width: 125px;
+    height: 125px;
+    margin-top: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 1rem;
+    color: var(--font);
+    box-shadow: 0 0 1rem var(--beton);
+    border: 4px solid var(--beton);
+    border-radius: 0.5rem;
+    background-color: var(--dark);
+    transition: all 0.3s;
+}
+
+#skill_flex_container > #html_background:hover{background-color: #F16529;cursor: default; transform: scale(1.1); transition: all 0.3s;}
+#skill_flex_container > #css_background:hover{background-color: #2965F1;cursor: default; transform: scale(1.1); transition: all 0.3s;}
+#skill_flex_container > #js_background:hover{background-color: #F7DF1E;cursor: default; transform: scale(1.1);  transition: all 0.3s;}
+#skill_flex_container > #git_background:hover{background-color: #F05030;cursor: default; transform: scale(1.1); transition: all 0.3s;}
+
+#skill_flex_container > .skill_container > .skill_container_innen{
+    width: 80px;
+    height: 80px;
+    font-size: 4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media (max-width:355px) {
+    #skill_flex_container{justify-content: center;}
+    #skills > h2{font-size: 1.2rem; text-align: center;}
+
+
+}
+
+/*===SKILLS===*/
+
+/*===GITHUB-LINK===*/
+
+#github_link{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 1.3rem;
+    margin-bottom: 2rem;
+}
+
+#github_link > a:visited{color: var(--font);}
+#github_link > a{
+    margin: 1rem;
+    text-decoration: none;
+    color: var(--font);
+    background-color: var(--dark);
+    padding: 0.7rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    border-radius: 0.2rem;
+    border: 2px solid var(--font);
+    transform: scale(1);
+    transition: transform 0.3s;
+}
+
+#github_link > a:hover{
+    background-color: var(--font);
+    color: var(--light);
+    transform: scale(1.1);
+    transition: transform 0.3s;
+}
+
+#github_link > a:active{transform: scale(1); transition: transform 0.1s;}
+
+@media (max-width:500px) {
+    #github_link{font-size: 1.1rem; flex-wrap: wrap;}
+}
+
+/*===GITHUB-LINK===*/

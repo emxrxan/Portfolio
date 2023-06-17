@@ -30,14 +30,14 @@
             <ul class="navigation_dropdown">
                 <li id="caption">
                     <span onclick="show_dropdown()" class="material-symbols-outlined">menu</span>
-                    <a href="index.html"><h2>Portfolio</h2></a>
                 </li>
                 
                 <li>
                     <ul class="navigation_dropdown_menu">
+                        <li><a href="index.html"><h2>Portfolio</h2></a></li>
                         <li><a href="#home" onclick="show_dropdown()">Home</a></li>
                         <li>
-                            <span onclick="show_project()" id="drop_span">Projekte</span>
+                            <span onclick="show_project()">Projekte</span>
                             <ul class="dropdown_project">
                                 <li><a href="#js" onclick="show_project() , show_dropdown()">Javascript</a></li>
                                 <li><a href="#api" onclick="show_project() , show_dropdown()">API</a></li>
@@ -49,7 +49,47 @@
             </ul>
 
             <div id="hauptcontent_container">
-                <section class="haupt_container" id="home">home</section>
+                <section class="haupt_container" id="home">
+                    <div id="about_me">
+                        <h3>Hallo zusammen, ich bin <span class="betonen">Emirhan</span></h3>
+                        <div id="profilbild"><img src="" alt=""></div>
+                        <p><span class="betonen">Programmieren</span> macht spaß, aber <span class="betonen">Webseiten</span> zu entwicklen ist viel spaßiger.</p>
+                        <p>Ich bin bereit mich weiterzuentwickeln und mich neuen <span class="betonen">Herausforderungen</span> zu stellen.</p>
+                        <p>Der Beruf <span class="betonen">Web-Entwickler</span> ist meine <span class="betonen">Zukunft</span>.</p>
+                        <p>
+                            Hier ist finden Sie nochmal einen Link zu meiner <a href="./src/bewerbung/Bewerbungsschreiben.pdf" target="_blank">Bewerbung</a>
+                            und meinem <a href="./src/bewerbung/Lebenslauf.pdf" target="_blank">Lebenslauf</a>.
+                        </p>
+                    </div>
+
+                    <div id="skills">
+                        <h2>Meine Skills:</h2>
+                        <div id="skill_flex_container">
+                            <div class="skill_container" id="html_background">
+                                <span class="skill_container_innen">H</span>
+                                <span id="html_color">HTML5</span>
+                            </div>
+                            <div class="skill_container" id="css_background">
+                                <span class="skill_container_innen">C</span>
+                                <span id="css_color">CSS3</span>
+                            </div>
+                            <div class="skill_container" id="js_background">
+                                <span class="skill_container_innen">J</span>
+                                <span id="js_color">JAVASCRIPT</span>
+                            </div>
+                            <div class="skill_container" id="git_background">
+                                <span class="skill_container_innen">G</span>
+                                <span id="git_color">GIT</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="github_link">
+                        <a href="#contact">Contact me</a>
+                        <a href="https://github.com/emxrxan" target="_blank">GitHub-Link</a>
+                    </div>
+                    
+                </section>
                 <section class="haupt_container" id="js">js</section>
                 <section class="haupt_container" id="api">api</section>
                 <section class="haupt_container" id="contact">contact</section>
@@ -73,41 +113,7 @@
 
             
             <!-- <section class="haupt_container" id="home">
-                <div id="about_me">
-                    <h3>Hallo zusammen, ich bin Emirhan <span class="material-symbols-outlined">sentiment_very_satisfied</span></h3>
-                    <div id="profilbild"><img src="" alt=""></div>
-                    <p><span class="betonen">Programmieren</span> macht spaß, aber <span class="betonen">Webseiten</span> zu entwicklen ist viel spaßiger.</p>
-                    <p>Ich bin bereit mich weiterzuentwickeln und mich neuen <span class="betonen">Herausforderungen</span> zu stellen.</p>
-                    <p>Der Beruf <span class="betonen">Web-Entwickler</span> ist meine <span class="betonen">Zukunft</span>.</p>
-                </div>
-                <div id="bewerbung">
-                    <p>
-                        Meine Bewerbung:<br>
-                        <a href="./src/bewerbung/Bewerbungsschreiben.pdf" target="_blank">Bewerbung</a>
-                        <a href="./src/bewerbung/Lebenslauf.pdf" target="_blank">Lebenslauf</a>
-                    </p>
-                </div>
-                <div id="skills">
-                    <h4>Meine Skills:</h4>
-                    <div id="skill_flex_container">
-                        <div class="skill_container">
-                            <span class="skill_container_innen" id="html_background">H</span>
-                            <span id="html_color">HTML5</span>
-                        </div>
-                        <div class="skill_container">
-                            <span class="skill_container_innen" id="css_background">C</span>
-                            <span id="css_color">CSS3</span>
-                        </div>
-                        <div class="skill_container">
-                            <span class="skill_container_innen" id="js_background">J</span>
-                            <span id="js_color">JAVASCRIPT</span>
-                        </div>
-                        <div class="skill_container">
-                            <span class="skill_container_innen" id="git_background">G</span>
-                            <span id="git_color">GIT-VERSION-CONTROL</span>
-                        </div>
-                    </div>
-                </div>
+                
 
                 <div id="github_link">
                     <a href="#contact">Contact me</a>
@@ -131,6 +137,11 @@
 
         
         <!--MAIN-CONTAINER-->
+
+        <!--FOOTER-->
+        <!--Hintergund bil von janjf93 link:https://pixabay.com/de/vectors/hexagon-symbol-gui-internet-2307350/-->
+        <!--FOOTER-->
+
 
         <!--MOUSE-SHADOW-->
 
