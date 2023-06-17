@@ -19,3 +19,11 @@ const set_darkmode = function(){
         button.querySelector(".material-symbols-outlined").innerText = "dark_mode";
     }
 }
+
+
+// const mouse_shadow = function(event){
+//     document.querySelector("#shadow").style.top = event.pageY+`px`;
+//     document.querySelector("#shadow").style.left = event.pageX+`px`;
+// }
+
+// document.querySelector("body").addEventListener("mousemove", mouse_shadow)
