@@ -6,6 +6,7 @@
     --dark: #188CA5;
     --beton: #19B7BD;
     --Hintergrund: #faf7eff2;
+    --bild: #faf7efbe;
 }
 
 /*===FAREBN===*/
@@ -42,7 +43,8 @@
     --dark: #072A40;
     --font: #188CA5;
     --beton: #19B7BD;
-    --Hintergrund: #31302f;
+    --Hintergrund: #454443;
+    --bild: #faf7efbe;
 }
 
 html,body{
@@ -277,7 +279,7 @@ li > .show_dropdown_project{
 #about_me > p{line-height: 2rem;}
 
 #about_me > h3 > .betonen{color: var(--beton);}
-#about_me > p > .betonen{box-shadow: 0 0 2rem var(--beton); padding: 0.2rem;}
+#about_me > p > .betonen{box-shadow: 0 0 2rem var(--beton); padding: 0.2rem; color: var(--beton);}
 
 #about_me > p > a:visited{color: var(--beton);}
 #about_me > p > a{color: var(--beton); text-decoration: none;border-bottom: 0px solid var(--beton);}
@@ -295,8 +297,6 @@ li > .show_dropdown_project{
     }
 }
 
-/*===HOME===*/
-
 /*===SKILLS===*/
 
 #skills{
@@ -304,6 +304,8 @@ li > .show_dropdown_project{
     padding-right: 1rem;
     margin-bottom: 4rem;
 }
+
+#skills > h2{color: var(--font);}
 
 #skill_flex_container{
     width: 100%;
@@ -343,8 +345,8 @@ li > .show_dropdown_project{
     align-items: center;
 }
 
-@media (max-width:355px) {
-    #skill_flex_container{justify-content: center;}
+@media (max-width:500px) {
+    #skill_flex_container{justify-content: space-between;}
     #skills > h2{font-size: 1.2rem; text-align: center;}
 
 
@@ -392,3 +394,122 @@ li > .show_dropdown_project{
 }
 
 /*===GITHUB-LINK===*/
+
+/*===HOME===*/
+
+/*===PROJEKTE===*/
+
+.haupt_container > h2{color: var(--font);}
+
+#js_flex_container{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 1rem;
+}
+
+#js_flex_container > .js_container{
+    width: 270px;
+    height: 350px;
+    background-color: var(--dark);
+    margin: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+    border: 5px solid var(--beton);
+    border-radius: 0.2rem;
+    box-shadow: 0 0 2rem var(--beton);
+}
+
+#js_flex_container > .js_container > .bild_projekt{
+    width: 88%;
+    height: 230px;
+    border: 3px solid var(--beton);
+    position: relative;
+}
+
+#js_flex_container > .js_container > .bild_projekt > img{width: 100%; height: 100%;}
+
+#js_flex_container > .js_container > .bild_projekt > .bild_farbe{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--bild);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#js_flex_container > .js_container > .bild_projekt > .bild_farbe > h1{font-weight: bold; color: var(--font); font-size: 2.5rem; word-wrap: break-word; width: 100%; text-align: center;}
+
+#js_flex_container > .js_container > .link{
+    width: 88%;
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.link > a:visited{
+    color: var(--font);
+    background-color: var(--light);
+}
+
+.link > a{
+    width: 45%;
+    text-decoration: none;
+    color: var(--font);
+    background-color: var(--light);
+    padding: 0.5rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    border-radius: 0.2rem;
+    border: 2px solid var(--font);
+    text-align: center;
+}
+
+.link > a:hover{
+    background-color: var(--font);
+    color: var(--light);
+}
+.link > a:active{
+    background-color: var(--beton);
+}
+
+/*===API-CONTAINER===*/
+
+#hauptcontent_container > #api{min-height: 60%;}
+
+/*===API-CONTAINER===*/
+
+@media (max-width:1355px) {
+    #js_flex_container{
+        justify-content: space-around;
+    }
+
+    .haupt_container > h2{text-align: center};
+}
+
+@media (max-width:666px) {
+    #js_flex_container > .js_container{
+        width: 70%;
+        height: 350px;
+    }
+
+    #js_flex_container > .js_container > .bild_projekt{height: 230px;}
+
+}
+
+@media (max-width:500px) {
+    #js_flex_container > .js_container{width: 88%;}
+    #hauptcontent_container > .haupt_container{padding-left: 0rem; padding-right: 0rem;}
+    .haupt_container > h2{font-size: 1.25rem};
+}
+/*===PROJEKTE===*/
