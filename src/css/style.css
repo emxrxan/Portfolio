@@ -5,7 +5,7 @@
     --light: #FAF7EF;
     --dark: #188CA5;
     --beton: #19B7BD;
-    --Hintergrund: #faf7eff2;
+    --Hintergrund: #faf7efe7;
     --bild: #faf7efbe;
 }
 
@@ -43,7 +43,7 @@
     --dark: #072A40;
     --font: #188CA5;
     --beton: #19B7BD;
-    --Hintergrund: #454443;
+    --Hintergrund: #454443f7;
     --bild: #faf7efbe;
 }
 
@@ -57,7 +57,7 @@ html,body{
 
 /*===GENERELLES===*/
 
-/*===MAIN_CONTAINER===*/
+/*===MAIN_CONTENT_CONTAINER===*/
 
 .main_container{
     width: 100%;
@@ -71,7 +71,7 @@ html,body{
 
 #navigation{grid-area: navigation;}
 
-/*===MAIN_CONTAINER===*/
+/*===MAIN_CONTENT_CONTAINER===*/
 
 /*===NAVIGATION===*/
 
@@ -199,7 +199,7 @@ li > .show_dropdown_project{
 
 /*===NAVIGATION===*/
 
-/*===MAIN-CONTAINER===*/
+/*===SECTION-CONTAINER===*/
 
 #hauptcontent_container{
     width: 100%;
@@ -215,6 +215,7 @@ li > .show_dropdown_project{
 #hauptcontent_container::-webkit-scrollbar{
     width: 10px;
     border: 2px solid var(--font);
+    background-color: var(--Hintergrund);
 }
 
 #hauptcontent_container::-webkit-scrollbar-thumb{
@@ -231,7 +232,7 @@ li > .show_dropdown_project{
     background-color: var(--Hintergrund);
 }
 
-/*===MAIN-CONTAINER===*/
+/*===SECTION-CONTAINER===*/
 
 /*===HOME===*/
 
@@ -356,7 +357,7 @@ li > .show_dropdown_project{
 
 /*===GITHUB-LINK===*/
 
-#github_link{
+.github_link{
     width: 100%;
     display: flex;
     justify-content: space-around;
@@ -365,8 +366,8 @@ li > .show_dropdown_project{
     margin-bottom: 2rem;
 }
 
-#github_link > a:visited{color: var(--font);}
-#github_link > a{
+.github_link > a:visited{color: var(--font);}
+.github_link > a{
     margin: 1rem;
     text-decoration: none;
     color: var(--font);
@@ -380,17 +381,17 @@ li > .show_dropdown_project{
     transition: transform 0.3s;
 }
 
-#github_link > a:hover{
+.github_link > a:hover{
     background-color: var(--font);
     color: var(--light);
     transform: scale(1.1);
     transition: transform 0.3s;
 }
 
-#github_link > a:active{transform: scale(1); transition: transform 0.1s;}
+.github_link > a:active{transform: scale(1); transition: transform 0.1s;}
 
 @media (max-width:500px) {
-    #github_link{font-size: 1.1rem; flex-wrap: wrap;}
+    .github_link{font-size: 1.1rem; flex-wrap: wrap;}
 }
 
 /*===GITHUB-LINK===*/
@@ -408,6 +409,7 @@ li > .show_dropdown_project{
     align-items: center;
     flex-wrap: wrap;
     margin-top: 1rem;
+    margin-bottom: 1rem;
 }
 
 #js_flex_container > .js_container{
@@ -512,4 +514,128 @@ li > .show_dropdown_project{
     #hauptcontent_container > .haupt_container{padding-left: 0rem; padding-right: 0rem;}
     .haupt_container > h2{font-size: 1.25rem};
 }
+
 /*===PROJEKTE===*/
+
+/*===FORM-MAIL===*/
+
+#hauptcontent_container > #contact{min-height: 70%;}
+
+#send_mail{width: 100%; padding: 0.8rem;}
+
+#send_mail > fieldset{
+    width: 100%;
+    color: var(--font);
+    padding: 1rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    border: 5px double var(--font);
+    border-radius: 0.2rem;
+}
+
+#send_mail legend{font-size: 1.2rem;}
+
+#send_mail label{display: block; margin-bottom: 1rem; font-size: 1.2rem;}
+
+#send_mail .input{margin-bottom: 1rem;}
+
+#send_mail input::placeholder{color: var(--font);}
+#send_mail input{
+    font-size: 1.1rem;
+    font-weight: bold;
+    width: 100%;
+    height: 2.5rem;
+    padding: 1rem;
+    color: var(--font);
+    background-color: var(--dark);
+    border: none;
+    border-bottom: 3px solid var(--font);
+    border-radius: 0.2rem;
+}
+#send_mail input:focus{background-color: var(--light);}
+
+#send_mail textarea::placeholder{color: var(--font);}
+#send_mail textarea{
+    font-size: 1.1rem;
+    font-weight: bold;
+    width: 100%;
+    height: 10rem;
+    padding: 1rem;
+    color: var(--font);
+    background-color: var(--dark);
+    border: none;
+    border-bottom: 3px solid var(--font);
+    border-radius: 0.2rem;
+}
+
+#send_mail textarea:focus{background-color: var(--light);}
+
+#send_mail button{
+    display: block;
+    width: 25rem;
+    height: 2.5rem;
+    margin: 0 auto;
+    color: var(--font);
+    font-weight: bold;
+    font-size: 1.2rem;
+    background-color: var(--dark);
+    padding: 0.5rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    border-radius: 0.2rem;
+    border: 2px solid var(--font);
+    transform: scale(1);
+    transition: transform 0.3s;
+}
+
+#send_mail button:hover{
+    cursor: pointer;
+    background-color: var(--font);
+    color: var(--light);
+    transform: scale(1.1);
+    transition: transform 0.3s;
+}
+
+#send_mail button:active{
+    background-color: var(--font);
+    color: var(--light);
+    transform: scale(1.1);
+    transition: transform 0.3s;
+}
+
+@media (max-width:535px) {
+    #send_mail button{
+        width: 100%;
+    }
+
+    #send_mail > fieldset{
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+}
+/*===FORM-MAIL===*/
+
+/*===DARKMODE===*/
+
+#darkmode-container{
+    position: fixed;
+    top: 0px;
+    right: 12px;
+    padding: 0.2rem;
+    padding-top: 0.4rem;
+    background-color: var(--dark);
+    border-top: 3px solid var(--font);
+    border-left: 3px solid var(--font);
+    border-bottom: 3px solid var(--font);
+    border-bottom-left-radius: 0.2rem;
+}
+
+#darkmode-container > .material-symbols-outlined{
+    font-weight: bold;
+    font-size: 1.7rem;
+    color: var(--font);
+}
+
+#darkmode-container > .material-symbols-outlined:hover{cursor: pointer;}
+
+/*===DARKMODE===*/

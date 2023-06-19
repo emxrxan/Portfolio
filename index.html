@@ -48,7 +48,12 @@
                 </li>
             </ul>
 
+            <!--NAGIGATION-->
+            
+            <!--MAIN-CONTAINER-->
             <div id="hauptcontent_container">
+
+                <!--HOME-->
                 <section class="haupt_container" id="home">
                     <div id="about_me">
                         <h3>Hallo zusammen, ich bin <span class="betonen">Emirhan</span></h3>
@@ -62,6 +67,7 @@
                         </p>
                     </div>
 
+                    <!--SKILLS-->
                     <div id="skills">
                         <h2>Meine Skills:</h2>
                         <div id="skill_flex_container">
@@ -84,14 +90,19 @@
                         </div>
                     </div>
 
-                    <div id="github_link">
+                    <!--GITHUB-LINK-->
+                    <div class="github_link">
                         <a href="#contact">Contact me</a>
                         <a href="https://github.com/emxrxan" target="_blank">GitHub-Link</a>
                     </div>
                     
                 </section>
-
+                <!--HOME-->
+                
+                <!--PROJEKTE-->
                 <section class="haupt_container" id="js">
+
+                    <!--JS-PROJEKTE-->
                     <h2>Javascript Projekte:</h2>
                     <div id="js_flex_container">
                         <div class="js_container">
@@ -135,8 +146,13 @@
                             </div>
                         </div>
                     </div>
+                    <div class="github_link"><a href="https://github.com/emxrxan" target="_blank">Weitere Projekte</a></div>
                 </section>
+
+                <!--PROJEKTE-->
                 <section class="haupt_container" id="api">
+                    
+                    <!--API-PROJEKTE-->
                     <h2>API-Projekte:</h2>
                     <div id="js_flex_container">
                         <div class="js_container">
@@ -170,38 +186,55 @@
                             </div>
                         </div>
                     </div>
+                    <div class="github_link"><a href="https://github.com/emxrxan" target="_blank">Weitere Projekte</a></div>
                 </section>
-                <section class="haupt_container" id="contact">contact</section>
+                <!--PROJEKTE-->
+
+                <!--CONTACT-FORM-->
+                <section class="haupt_container" id="contact">
+                    <form action="#" method="post" id="send_mail">
+                        <fieldset>
+                            <legend>Contact me:</legend>
+                            
+                            <div class="input">
+                                <label for="name">Name:</label>
+                                <input id="name" type="text" name="name" form="send_mail" placeholder="Dein Name ..." required>
+                            </div>
+
+                            <div class="input">
+                                <label for="email">E-Mail:</label>
+                                <input id="email" type="email" name="email" form="send_mail" placeholder="Deine E-Mail ..." required>
+                            </div>
+
+                            <div class="input">
+                                <label for="message">Ihre Nachricht:</label>
+                                <textarea id="message" name="message" form="send_mail" placeholder="Hier bitte eine Nachricht eintragen ..." required></textarea>
+                            </div>
+                            
+                            <button type="submit">Senden</button>
+                        </fieldset>
+                    </form> 
+                </section>
+                <!--CONTACT-FORM-->
             </div>
         </div>
 
-            <!--DROPDOWN-->
+        <!--MAIN-CONTAINER-->
 
-            <!--NAVIGATION-->
-
-            <!--DARKMODE-->
-
-            <!-- <div class="darkmode-container">
-                <div id="button" onclick="set_darkmode()"><span class="material-symbols-outlined">dark_mode</span></div>
-            </div> -->
-
-            <!--DARKMODE-->
+        <!--DARKMODE-->
+        <div id="darkmode-container" onclick="set_darkmode()"><span class="material-symbols-outlined">dark_mode</span></div>
+        <!--DARKMODE-->
 
 
         <!--FOOTER-->
         <!--Hintergund bil von janjf93 link:https://pixabay.com/de/vectors/hexagon-symbol-gui-internet-2307350/-->
         <!--FOOTER-->
 
-
-        <!--MOUSE-SHADOW-->
-
-        <!-- <div id="shadow"></div> -->
-
-        <!--MOUSE-SHADOW-->
-
         <!--JS-SCRIPT-->
 
-        <script src="./src/js/anziegen.js" defer></script>
+        <script type="text/javascript"src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+        <script type="text/javascript">(function(){emailjs.init("EEqPPmDp719LOW45W");})();</script>
+        <script src="./src/js/index.js" defer></script>
 
         <!--JS-SCRIPT-->
 
