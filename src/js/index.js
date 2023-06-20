@@ -1,15 +1,18 @@
 "use-strict";
 
+//zeigt in der Navigationsleiste die Projekte als Dropdown-Menü
 const show_project = function(){
     document.querySelectorAll(".dropdown_project").forEach(element =>{
         element.classList.toggle("show_dropdown_project");
     });
 }
 
+//zeigt die Navigationsleiste als Dropdown-Menü
 const show_dropdown = function(){
     document.querySelector(".navigation_dropdown").classList.toggle("show_navigation_dropdown")
 }
 
+//Führt Dark- und Lightmode auf der Seite aus
 const set_darkmode = function(){
     document.querySelector("body").classList.toggle("darkmode");
     const button = document.querySelector("#darkmode-container");
@@ -20,7 +23,7 @@ const set_darkmode = function(){
     }
 }
 
-
+//Sendet eine E-Mail an Meine E-Mail als Contact-Formular
 document.querySelector("#send_mail").addEventListener("submit", (data)=>{
         data.preventDefault();
         const name = data.target.elements.name.value;
