@@ -300,22 +300,28 @@ li > .show_dropdown_project{
 
 /*===SKILLS===*/
 
-#skills{
+.skills{
     padding-left: 1rem;
     padding-right: 1rem;
     margin-bottom: 4rem;
 }
 
-#skills > h2{color: var(--font);}
+.skills > h2{color: var(--font);}
 
-#skill_flex_container{
+.skill_flex_container{
     width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;   
     flex-wrap: wrap;
 }
-#skill_flex_container > .skill_container{
+
+.skills ~ .skills .skill_flex_container{
+    justify-content: space-evenly;
+    
+}
+
+.skill_flex_container > .skill_container{
     width: 125px;
     height: 125px;
     margin-top: 1.5rem;
@@ -332,12 +338,14 @@ li > .show_dropdown_project{
     transition: all 0.3s;
 }
 
-#skill_flex_container > #html_background:hover{background-color: #F16529;cursor: default; transform: scale(1.1); transition: all 0.3s;}
-#skill_flex_container > #css_background:hover{background-color: #2965F1;cursor: default; transform: scale(1.1); transition: all 0.3s;}
-#skill_flex_container > #js_background:hover{background-color: #F7DF1E;cursor: default; transform: scale(1.1);  transition: all 0.3s;}
-#skill_flex_container > #git_background:hover{background-color: #F05030;cursor: default; transform: scale(1.1); transition: all 0.3s;}
+.skill_flex_container > #html_background:hover{background-color: #F16529;cursor: default; transform: scale(1.1); transition: all 0.3s;}
+.skill_flex_container > #css_background:hover{background-color: #2965F1;cursor: default; transform: scale(1.1); transition: all 0.3s;}
+.skill_flex_container > #js_background:hover{background-color: #F7DF1E;cursor: default; transform: scale(1.1);  transition: all 0.3s;}
+.skill_flex_container > #git_background:hover{background-color: #F05030;cursor: default; transform: scale(1.1); transition: all 0.3s;}
+.skill_flex_container > #node_background:hover{background-color: #2aad49;cursor: default; transform: scale(1.1); transition: all 0.3s;}
+.skill_flex_container > #angular_background:hover{background-color: #ad2a2a;cursor: default; transform: scale(1.1); transition: all 0.3s;}
 
-#skill_flex_container > .skill_container > .skill_container_innen{
+.skill_flex_container > .skill_container > .skill_container_innen{
     width: 80px;
     height: 80px;
     font-size: 4rem;
@@ -347,8 +355,8 @@ li > .show_dropdown_project{
 }
 
 @media (max-width:500px) {
-    #skill_flex_container{justify-content: space-between;}
-    #skills > h2{font-size: 1.2rem; text-align: center;}
+    .skill_flex_container{justify-content: space-around; align-items: flex-start;}
+    .skills > h2{font-size: 1.2rem; text-align: center;}
 
 
 }
