@@ -259,7 +259,6 @@ li > .show_dropdown_project{
 }
 
 #about_me > #profilbild{
-    min-width: 100px;
     min-height: 200px;
     max-width: 200px;
     background-color: var(--dark);
@@ -295,13 +294,14 @@ li > .show_dropdown_project{
 
 
 
-@media (max-width:600px) {
+@media (max-width:610px) {
     #about_me{font-size: 1rem;}
 
     #about_me > #profilbild{
-        min-width: 150px;
+        max-width: 150px;
         min-height: 150px;
     }
+    /* #about_me > #profilbild img{transform: scale(1)}; */
 }
 
 /*===SKILLS===*/
