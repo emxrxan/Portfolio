@@ -2,7 +2,7 @@
 
 <h3>About</h3>
 <p align="left">
-  Dies ist ein persönliches Portfolio und eine kurze Beschreibung über meine Person. Meine bisherigen Projekte sind ebenso auf der Webseite zu finden.
+  Dies ist ein persönliches Portfolio und eine kurze Beschreibung über meine Person. Meine bisherigen Projekte sind ebenso auf der Webseite zu finden. Am Ende der Seite können Sie mich kontaktieren und eine E-Mail schreiben.
 </p>
 
 <h3 align="left">Gearbeitet mit folgenden Programmiersprachen:</h3>
