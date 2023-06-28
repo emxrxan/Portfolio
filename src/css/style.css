@@ -259,8 +259,9 @@ li > .show_dropdown_project{
 }
 
 #about_me > #profilbild{
-    min-width: 200px;
+    min-width: 100px;
     min-height: 200px;
+    max-width: 200px;
     background-color: var(--dark);
     border: 3px solid var(--font);
     border-radius: 100%;
@@ -269,12 +270,17 @@ li > .show_dropdown_project{
     animation-iteration-count: infinite;
     animation-direction: alternate;
     animation-timing-function: ease-in-out;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-#about_me > #profilbild > img{
+#about_me > #profilbild img{
     width: 100%;
     height: auto;
     border-radius: 100%;
+    transform: scale(1.8);
 }
 
 #about_me > p{line-height: 2rem;}
