@@ -27,16 +27,16 @@ const set_darkmode = function(){
 document.querySelector("#send_mail").addEventListener("submit", (data)=>{
         data.preventDefault();
         const name = data.target.elements.name.value;
-        const email = data.target.elements.email.value;
         const message = data.target.elements.message.value;
         
         try{
-            emailjs.send("service_t1pe6mf","template_xajg445",{
-                from_name: `${name}`,
-                email_id: `${email}`,
-                message: `${message}`
+            Email.send({
+                SecureToken : "b6449b9c-3bc3-4a2e-b8b9-c65aa1534ab9",
+                To : "emirgurk@gmail.com",
+                From : "emirgurk@gmail.com",
+                Subject : `Neue Bewerbung von ${name}`,
+                Body : `${message}`
             });
-
             alert("Erfolgreich gesendet.");
             data.target.reset();
         } catch(error){

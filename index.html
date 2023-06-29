@@ -224,11 +224,6 @@
                             </div>
 
                             <div class="input">
-                                <label for="email">E-Mail:</label>
-                                <input id="email" type="email" name="email" form="send_mail" placeholder="Deine E-Mail ..." required>
-                            </div>
-
-                            <div class="input">
                                 <label for="message">Ihre Nachricht:</label>
                                 <textarea id="message" name="message" form="send_mail" placeholder="Hier bitte eine Nachricht eintragen ..." required></textarea>
                             </div>
@@ -254,8 +249,7 @@
 
         <!--JS-SCRIPT-->
 
-        <script type="text/javascript"src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
-        <script type="text/javascript">(function(){emailjs.init("EEqPPmDp719LOW45W");})();</script>
+        <script src="https://smtpjs.com/v3/smtp.js"></script>
         <script src="./src/js/index.js" defer></script>
 
         <!--JS-SCRIPT-->
